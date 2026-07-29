@@ -68,3 +68,39 @@
     width: 35px;
     height: 20px;
 }
+
+.main{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cuadro img{
+    width: 200px;
+    height: 200px;
+}
+
+.logotipo img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.perfiles img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px 5px;
+    transition: transform 0.3s ease;
+}
+
+.perfiles img:hover{
+    transform: scale(1.02);
+}
+
+.paneles img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3afaa0;
+    outline: solid 2px white;
+}
