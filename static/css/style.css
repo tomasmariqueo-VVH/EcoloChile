@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: solid 1px red;
 }
 
-.navbar{
+.navbar {
     background-color: #3afaa0;
     padding: 15px 40px;
     /* Flexbox */
@@ -29,14 +29,12 @@
     margin-left: 20px;
 }
 
-/* Icono logo */
 .logo i {
     margin-right: 8px;
     font-size: 28px;
     color: #fff;
 }
 
-/* Navegación */
 .nav-links {
     /* Flex */
     display: flex;
@@ -59,45 +57,67 @@
     transform: scale(1.05);
 }
 
-.idiomas{
+.idiomas {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
-.idiomas img{
+.idiomas a {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    border-radius: 5px 5px;
+}
+
+.idiomas a:hover {
+    transform: scale(1.1);
+}
+
+.idiomas img {
     width: 35px;
     height: 20px;
 }
 
-.main{
-    padding: 5px;
+.main {
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.cuadro img{
-    width: 200px;
+.problematica {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.cuadro img {
+    width: 300px;
     height: 200px;
 }
 
-.logotipo img{
+.logotipo img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-.perfiles img{
+.perfiles img {
     width: 200px;
     height: 200px;
     border-radius: 5px 5px;
     transition: transform 0.3s ease;
 }
 
-.perfiles img:hover{
+.perfiles img:hover {
     transform: scale(1.02);
 }
 
-.paneles img{
+.paneles img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
