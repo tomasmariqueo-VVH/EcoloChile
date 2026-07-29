@@ -10,22 +10,28 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#">BarrioLimpio</a>
+                <i>BarrioLimpio</i>
+            </div>
+            <div class="idiomas">
+                <a href="index.html"><img src="static/images/spain.png" alt="español" class="spanish"></a>
+                <a href="pages/"><img src="static/images/unitedkingdom.png" alt="english" class="english"></a>
             </div>
             <div class="nav-links">
-                <a href="#">Inicio</a>
-                <a href="#">¿Quienes somos?</a>
-                <a href="#">Solución</a>
-                <a href="#">¿Como funciona?</a>
-                <a href="#">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#quienesSomos">¿Quienes somos?</a>
+                <a href="#proyecto">Solución</a>
+                <a href="#comoFunciona">¿Como funciona?</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
     </header>
+
     <main class="main">
-        <div class="problematica">
+        <div class="problematica" id="inicio">
             <h2>La gestión residual en Chile</h2>
             <div class="contenido">
                 <p>La falta de infraestructura en Chile afecta principalmente
@@ -46,58 +52,101 @@
                     problemática muy dura en Chile y que abordar será difícil.</p>
             </div>
             <div class="cuadro">
-                <img src="" alt="">
+                <img src="static/images/fotoResiduos.png" alt="informativo">
             </div>
         </div>
 
-        <div class="informacion">
+        <div class="informacion" id="quienesSomos">
             <h2>¿Quienes somos?</h2>
             <div class="contenido">
-                <p>Nosotros somos EcoloChile, una pequeña empresa con el objetivo de mejorar el medio
-                    ambiente por medio del reciclaje y la reutilización de desechos.</p>
+                <p>
+                    Nosotros somos EcoloChile, una pequeña empresa con el objetivo de mejorar el medio
+                    ambiente por medio del reciclaje y la reutilización de desechos.
+                </p>
             </div>
             <div class="cuadro">
-                <img src="" alt="logotipo">
+                <img src="static/images/image.png" alt="logotipo">
             </div>
         </div>
 
-        <div class="solucion">
-            <h2>Proyecto: "BarrioLimpio"</h2>
+        <div class="solucion" id="proyecto">
+            <h2>Proyecto: App "BarrioLimpio"</h2>
             <div class="contenido">
-
-            </div>
-            <div class="cuadro">
-                <img src="" alt="prototipo">
+                <p>
+                    Nuestro proyecto se basa en cooperación por cernanía geográfica (geolocalización).
+                    La aplicación divide a los usuarios en dos perfiles ultra simples dentro del mismo mapa de la
+                    comuna:
+                </p>
+                <div class="perfiles">
+                    <h3>El vecino (Generador)</h3>
+                    <p>
+                        Quién es: La persona que quiere reciclar pero no tiene tiempo,
+                        tiene movilidad reducida o simplemente no quiere salir de su casa.
+                    </p>
+                    <p>
+                        Su acción: Junta sus botellas o cartones en una sola bolsa,
+                        abre la app y presiona un botón: "Bolsa Lista"
+                    </p>
+                    <img src="static/images/vecino.PNG" alt="vecino" class="perfil">
+                </div>
+                <div class="perfiles">
+                    <h3>El Eco-Voluntario / Reciclador</h3>
+                    <p>
+                        Quién es: El joven scout, el vecino sustentable con auto/triciclo,
+                        o el reciclador de base de la comuna.
+                    </p>
+                    <p>
+                        Su acción: Abre la app, ve el mapa de su sector con "puntos encendidos"
+                        y pasa a retirarlos para acumularlos o venderlos.
+                    </p>
+                    <img src="static/images/voluntario.PNG" alt="voluntario" class="perfil">
+                </div>
             </div>
         </div>
 
-        <div class="explicacion">
-            <div class="paneles"></div>
-            <div class="paneles"></div>
-            <div class="paneles"></div>
+        <div class="explicacion" id="comoFunciona">
+            <h2>Como funciona nuestro flujo con 3 pasos</h2>
+            <div class="paneles">
+                <h3>1. El vecino avisa</h3>
+                <p></p>
+                <img src="static/images/cellphone.png" alt="icono">
+            </div>
+            <div class="paneles">
+                <h3>2. EL voluntario acepta</h3>
+                <p></p>
+                <img src="static/images/truck.png" alt="icono">
+            </div>
+            <div class="paneles">
+                <h3>3. Retiro y validación</h3>
+                <p></p>
+                <img src="static/images/check.png" alt="icono">
+            </div>
         </div>
 
-        <div class="contacto">
+        <div class="contacto" id="contacto">
             <div class="contenido">
-
+                <p>tomasmariqueo@liceovvh.cl</p>
             </div>
         </div>
     </main>
+
     <footer>
         <nav class="navbar">
-            <div class="logo">
-                <a href="#">EcoloChile</a>
+            <div class="derechos">
+                <p>Todos los derechos reservados.</p>
             </div>
             <div class="nav-links">
-                <a href="#">Inicio</a>
-                <a href="#">¿Quienes somos?</a>
-                <a href="#">Solución</a>
-                <a href="#">¿Como funciona?</a>
-                <a href="#">Contacto</a>
+                <a href="#inicio">Inicio</a>
+                <a href="#quienessomos">¿Quienes somos?</a>
+                <a href="#solucion">Solución</a>
+                <a href="#comofunciona">¿Como funciona?</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
     </footer>
+
     <script src="static/js/script.js"></script>
+
 </body>
 
 </html>
