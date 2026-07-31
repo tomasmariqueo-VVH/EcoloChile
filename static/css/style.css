@@ -5,122 +5,420 @@
     outline: solid 1px red;
 }
 
-.navbar {
-    background-color: #3afaa0;
-    padding: 15px 40px;
-    /* Flexbox */
+:root {
+    --verde-primario: #059669;    /* Verde Esmeralda Ecología */
+    --verde-brillante: #10b981;  /* Verde Reciclaje Vivo */
+    --verde-lima: #84cc16;       /* Hoja / Naturaleza */
+    --verde-oscuro: #064e3b;     /* Verde Bosque */
+    --verde-suave: #ecfdf5;      /* Fondo Menta Suave */
+    --fondo-pagina: #f0fdf4;     /* Fondo general eco */
+    --blanco: #ffffff;
+    --texto-dark: #0f172a;
+    --texto-mute: #475569;
+    
+    /* Degradados dinámicos */
+    --gradient-eco: linear-gradient(135deg, #059669 0%, #10b981 50%, #84cc16 100%);
+    --gradient-card: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+    --gradient-contacto: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+    
+    /* Sombras dinámicas con destello verde */
+    --sombra-card: 0 10px 25px -5px rgba(16, 185, 129, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    --sombra-hover: 0 20px 30px -10px rgba(16, 185, 129, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--fondo-pagina);
+    color: var(--texto-dark);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Patrón de fondo sutil ecológico */
+    background-image: radial-gradient(#10b981 0.75px, transparent 0.75px);
+    background-size: 24px 24px;
+    background-color: var(--fondo-pagina);
+}
+
+/* --- Encabezado Dinámico con Efecto Cristal (Glassmorphism) --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px solid var(--verde-brillante);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, margin-left 0.5s ease;
-}
-
-.logo a:hover {
-    transform: scale(1.1);
-    margin-left: 20px;
-}
-
+/* Logo animado */
 .logo i {
-    margin-right: 8px;
-    font-size: 28px;
-    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: var(--gradient-eco);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+    letter-spacing: -0.5px;
+    position: relative;
 }
 
-.nav-links {
-    /* Flex */
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-/* Efecto hover */
-.nav-links a:hover {
-    background-color: #fff;
-    color: #3afaa0;
-    transform: scale(1.05);
+.logo i::after {
+    content: ' ♻';
+    -webkit-text-fill-color: var(--verde-brillante);
+    font-size: 1.2rem;
 }
 
 .idiomas {
     display: flex;
-    gap: 10px;
-}
-
-.idiomas a {
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    border-radius: 5px 5px;
-}
-
-.idiomas a:hover {
-    transform: scale(1.1);
+    gap: 0.6rem;
+    align-items: center;
 }
 
 .idiomas img {
-    width: 35px;
+    width: 28px;
     height: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+.idiomas img:hover {
+    transform: scale(1.2) rotate(3deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+}
+
+/* Subrayado animado para el menú */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient-eco);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--verde-primario);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* --- Contenedor Principal (`.main`) --- */
 .main {
-    padding: 10px;
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
+    gap: 3rem;
 }
 
-.problematica {
+/* --- Estilo de Tarjetas Principales --- */
+.problematica, 
+.informacion, 
+.solucion, 
+.explicacion, 
+.contacto {
+    background: var(--gradient-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problematica:hover, 
+.informacion:hover, 
+.solucion:hover, 
+.explicacion:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+/* Titulares con diseño dinámico ecológico */
+h2 {
+    color: var(--verde-oscuro);
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.6rem;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 0.5rem;
 }
 
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 5px;
+    background: var(--gradient-eco);
+    border-radius: 10px;
+}
+
+p {
+    line-height: 1.75;
+    font-size: 1.02rem;
+    color: var(--texto-mute);
+}
+
+/* --- Filas con Imágenes Resaltadas (`.row`) --- */
 .row {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    align-items: center;
+    gap: 2.5rem;
 }
 
-.cuadro img {
-    width: 300px;
-    height: 200px;
+.row .contenido {
+    flex: 1.2;
 }
 
-.logotipo img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.row .cuadro, 
+.row .logotipo {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
 }
 
-.perfiles img {
-    width: 200px;
-    height: 200px;
-    border-radius: 5px 5px;
+.row img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.15);
+    border: 3px solid var(--blanco);
     transition: transform 0.3s ease;
 }
 
-.perfiles img:hover {
-    transform: scale(1.02);
+.row img:hover {
+    transform: scale(1.03) rotate(-1deg);
 }
 
-.paneles img {
-    width: 50px;
-    height: 50px;
+/* --- Sección Solución: Perfiles en Fila Flexbox --- */
+.solucion .contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.solucion .contenido > p {
+    flex: 1 1 100%;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+/* Contenedores en paralelo de El Vecino y El Eco-Voluntario */
+.solucion .perfiles {
+    flex: 1 1 calc(50% - 1.5rem);
+    background-color: var(--blanco);
+    padding: 1.8rem;
+    border-radius: 16px;
+    border-top: 5px solid var(--verde-brillante);
+    border-right: 1px solid rgba(16, 185, 129, 0.2);
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+    border-left: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.solucion .perfiles:hover {
+    background-color: var(--verde-suave);
+    transform: translateY(-5px);
+}
+
+.solucion .perfiles h3 {
+    color: var(--verde-primario);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.solucion .perfiles img.perfil {
+    max-width: 140px;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    border: 2px solid var(--verde-lima);
+}
+
+/* --- Sección Explicación: Flujo en 3 Pasos --- */
+.explicacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.explicacion h2 {
+    flex: 1 1 100%;
+}
+
+.explicacion .paneles {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 240px;
+    background: var(--blanco);
+    border: 2px dashed var(--verde-brillante);
+    padding: 2rem 1.2rem;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.explicacion .paneles:hover {
+    transform: translateY(-8px);
+    border-style: solid;
+    background: var(--verde-suave);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
+}
+
+.explicacion .paneles h3 {
+    color: var(--verde-oscuro);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.explicacion .paneles img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(5, 150, 105, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.explicacion .paneles:hover img {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.paneles img{
     border-radius: 50%;
-    background-color: #3afaa0;
-    outline: solid 2px white;
+    outline: solid 2px mediumseagreen;
+}
+
+/* --- Sección Contacto Vibrante --- */
+.contacto {
+    background: var(--gradient-contacto);
+    text-align: center;
+    color: var(--blanco);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adorno dinámico para contacto */
+.contacto::before {
+    content: '♻';
+    position: absolute;
+    right: -20px;
+    bottom: -30px;
+    font-size: 10rem;
+    opacity: 0.08;
+    color: var(--blanco);
+}
+
+.contacto h3 {
+    color: var(--verde-lima);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.contacto p {
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    background-color: var(--verde-oscuro);
+    border-top: 4px solid var(--verde-lima);
+    margin-top: auto;
+}
+
+footer .navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .derechos p {
+    color: #a7f3d0;
+    font-size: 0.95rem;
+}
+
+footer .nav-links a {
+    color: var(--blanco);
+}
+
+footer .nav-links a:hover {
+    color: var(--verde-lima);
+}
+
+/* --- Responsivo para Celulares y Tablets --- */
+@media (max-width: 768px) {
+    header .navbar, 
+    footer .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .solucion .perfiles,
+    .explicacion .paneles {
+        flex: 1 1 100%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

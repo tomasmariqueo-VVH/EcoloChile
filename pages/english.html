@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="EcoloChile - Proyecto escolar sobre la gestión sustentable de residuos y reciclaje en Chile con la app BarrioLimpio.">
     <meta name="author" content="EcoloChile">
     <link rel="stylesheet" href="../static/css/style.css">
-    <title>EcoloChile</title>
+    <title>EcoloChile | BarrioLimpio</title>
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navegación principal">
             <div class="logo">
                 <i>BarrioLimpio</i>
             </div>
             <div class="idiomas">
-                <a href="../index.html"><img src="../static/images/spain.png" alt="español" class="spanish"></a>
-                <a href="../pages/english.html"><img src="../static/images/unitedkingdom.png" alt="english"
-                        class="english"></a>
+                <a href="../index.html" title="Español"><img src="../static/images/spain.png" alt="Idioma Español"
+                        class="spanish"></a>
+                <a href="../pages/english.html" title="English"><img src="../static/images/unitedkingdom.png"
+                        alt="English Language" class="english"></a>
             </div>
             <div class="nav-links">
                 <a href="#inicio">Home</a>
@@ -32,120 +35,143 @@
     </header>
 
     <main class="main">
-        <div class="problematica" id="inicio">
+
+        <section class="problematica" id="inicio">
             <h2>Residual waste management in Chile</h2>
             <div class="row">
                 <div class="contenido">
-                    <p>The lack of infrastructure in Chile primarily affects how Chileans recycle,
+                    <p>
+                        The lack of infrastructure in Chile primarily affects how Chileans recycle,
                         as there are typically few recycling zones, bins, or centers available.
                         This frequently leads to trash piling up in urban areas—such as on sidewalks,
-                        in parks, around trees, and even on beaches or in natural settings. A 2018
-                        report by the University of Chile revealed a total of 19.6 million tons of
+                        in parks, around trees, and even on beaches or in natural settings.
+                    </p>
+                    <p>
+                        A 2018 report by the University of Chile revealed a total of <strong>19.6 million tons</strong>
+                        of
                         annual solid waste—55% industrial and 42% household (or municipal)—a figure
                         that is unacceptable for a country like Chile. This situation impacts many
                         Chilean citizens. On average, there are only between 4,000 and 6,000 recycling
                         points or containers in Santiago—a very low number compared to the 3.6 to 4
                         million tons of waste generated in the city. Similarly, the 22,000 tons of waste
                         generated in San Ramón stand in stark contrast to its mere 40 to 60 recycling points.
-                        This is a severe problem in Chile that will be difficult to address.</p>
+                        This is a severe problem in Chile that will be difficult to address.
+                    </p>
                 </div>
                 <div class="cuadro">
-                    <img src="../static/images/fotoResiduos.png" alt="informativo">
+                    <img src="../static/images/fotoResiduos.png"
+                        alt="Problemática de residuos y basura en zonas urbanas de Chile">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="informacion" id="quienesSomos">
+        <section class="informacion" id="quienesSomos">
             <h2>Who are we?</h2>
             <div class="row">
                 <div class="contenido">
                     <p>
-                        We are EcoloChile, a multidisciplinary team of young people committed
-                        to sustainable transformation and social innovation. We emerged from
+                        We are <strong>EcoloChile</strong>, a multidisciplinary team of young people committed
+                        to sustainable transformation and social innovation.
+                    </p>
+                    <p>
+                        We emerged from
                         the urgent need to address one of the most critical and visible issues
                         in our environment: the infrastructure crisis in waste management
                         and the recycling deficit in our country's municipalities.
                     </p>
                 </div>
                 <div class="logotipo">
-                    <img src="../static/images/image.png" alt="logotipo">
+                    <img src="../static/images/image.png" alt="Logotipo oficial de EcoloChile">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="solucion" id="proyecto">
+        <section class="solucion" id="proyecto">
             <h2>Project: App "BarrioLimpio"</h2>
             <div class="contenido">
                 <p>
-                    Our project is based on cooperation driven by geographic proximity (geolocation).
+                    Our project is based on cooperation driven by geographic proximity <strong>(geolocation)</strong>.
                     The application divides users into two ultra-simple profiles on the same map of the
                     municipality:
                 </p>
-                <div class="perfiles">
-                    <h3>The Neighbor (Generator)</h3>
+
+                <article class="perfiles">
+                    <h3>The neighbor (Generator)</h3>
                     <p>
-                        Who it is: The person who wants to recycle but lacks the time,
+                        <strong>Who is it:</strong> The person who wants to recycle but lacks the time,
                         has limited mobility, or simply does not want to leave home.
                     </p>
                     <p>
-                        Su acción: Junta sus botellas o cartones en una sola bolsa,
-                        abre la app y presiona un botón: "Bolsa Lista"
+                        <strong>His action:</strong> He gathers his bottles and/or recyclable materials
+                        and puts them into trash bags to leave at the entrance of the home and
+                        then he press the app button: <em>"Bag ready"</em>.
                     </p>
-                    <img src="../static/images/vecino.PNG" alt="vecino" class="perfil">
-                </div>
-                <div class="perfiles">
-                    <h3>The Eco-Volunteer / Recycler</h3>
-                    <p>
-                        Who they are: The young scout, the eco-conscious neighbor with a car or tricycle,
-                        or the local grassroots recycler.
-                    </p>
-                    <p>
-                        Su acción: Abre la app, ve el mapa de su sector con "puntos encendidos"
-                        y pasa a retirarlos para acumularlos o venderlos.
-                    </p>
-                    <img src="../static/images/voluntario.PNG" alt="voluntario" class="perfil">
-                </div>
-            </div>
-        </div>
+                    <img src="../static/images/vecino.PNG" alt="Perfil del vecino generador en BarrioLimpio"
+                        class="perfil">
+                </article>
 
-        <div class="explicacion" id="comoFunciona">
+                <article class="perfiles">
+                    <h3>The Eco-Volunteer/Recycler</h3>
+                    <p>
+                        <strong>Who is it:</strong> They are volunteers or workers responsible for picking up the
+                        packages.
+                    </p>
+                    <p>
+                        <strong>His action:</strong> He opens the app and checks the map,
+                        looking for the nearest pickup point to collect the bags.
+                    </p>
+                    <img src="../static/images/voluntario.PNG"
+                        alt="Perfil del eco-voluntario reciclador en BarrioLimpio" class="perfil">
+                </article>
+            </div>
+        </section>
+
+        <section class="explicacion" id="comoFunciona">
             <h2>How our 3-step workflow works:</h2>
             <div class="paneles">
-                <h3>1. El vecino avisa</h3>
-                <p></p>
-                <img src="../static/images/cellphone.png" alt="icono">
+                <h3>1. The neighbor alerts</h3>
+                <p>
+                    The generator gathers their materials and presses the button in the app to request a pickup.
+                </p>
+                <img src="../static/images/cellphone.png" alt="Icono de notificación en teléfono móvil">
             </div>
             <div class="paneles">
-                <h3>2. EL voluntario acepta</h3>
-                <p></p>
-                <img src="../static/images/truck.png" alt="icono">
+                <h3>2. The Eco-Volunteer/Recycler accepts</h3>
+                <p>
+                    A nearby collector sees the alert on the map and begins the pickup route.
+                </p>
+                <img src="../static/images/truck.png" alt="Icono de transporte o camión de recolección">
             </div>
             <div class="paneles">
-                <h3>3. Retiro y validación</h3>
-                <p></p>
-                <img src="../static/images/check.png" alt="icono">
+                <h3>3. Pickup and validation</h3>
+                <p>
+                    The bag is collected from the residence, and the successful eco-friendly delivery is confirmed via
+                    the QR code.
+                </p>
+                <img src="../static/images/check.png" alt="Icono de confirmación y validación">
             </div>
-        </div>
+        </section>
 
-        <div class="contacto" id="contacto">
+        <section class="contacto" id="contacto">
             <div class="contenido">
                 <h3>Our informative contact:</h3>
                 <p>tomasmariqueo@liceovvh.cl</p>
             </div>
-        </div>
+        </section>
+
     </main>
 
     <footer>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navegación del pie de página">
             <div class="derechos">
-                <p>All rights reserved.</p>
+                <p>© All rights reserved. Project EcoloChile.</p>
             </div>
             <div class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#quienessomos">¿Quienes somos?</a>
-                <a href="#solucion">Solución</a>
-                <a href="#comofunciona">¿Como funciona?</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#inicio">Home</a>
+                <a href="#quienesSomos">Who are we?</a>
+                <a href="#proyecto">Solution</a>
+                <a href="#comoFunciona">How it works?</a>
+                <a href="#contacto">Contact</a>
             </div>
         </nav>
     </footer>
