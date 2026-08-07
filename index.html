@@ -7,6 +7,12 @@
     <meta name="description"
         content="EcoloChile - Proyecto escolar sobre la gestión sustentable de residuos y reciclaje en Chile con la app BarrioLimpio.">
     <meta name="author" content="EcoloChile">
+    
+    <!-- Fuentes tipográficas externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="static/css/style.css">
     <title>EcoloChile | BarrioLimpio</title>
 </head>
@@ -18,39 +24,52 @@
             <div class="logo">
                 <i>BarrioLimpio</i>
             </div>
+
             <div class="idiomas">
-                <a href="index.html" title="Español"><img src="static/images/spain.png" alt="Idioma Español"
-                        class="spanish"></a>
-                <a href="pages/english.html" title="English"><img src="static/images/unitedkingdom.png"
-                        alt="English Language" class="english"></a>
+                <a href="index.html" title="Español"><img src="static/images/spain.png" alt="Idioma Español" class="spanish"></a>
+                <a href="pages/english.html" title="English"><img src="static/images/unitedkingdom.png" alt="English Language" class="english"></a>
             </div>
-            <div class="nav-links">
-                <a href="#portada">Inicio</a>
-                <a href="#ODS">ODS</a>
-                <a href="#problema">Nuestro problema</a>
-                <a href="#quienesSomos">¿Quiénes somos?</a>
-                <a href="#proyecto">Solución</a>
-                <a href="#comoFunciona">¿Cómo funciona?</a>
-                <a href="#contacto">Contacto</a>
+
+            <a href="#portada" class="nav-inicio-fixed">Inicio</a>
+
+            <!-- Botón Hamburguesa -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menú Desplegable con las demás opciones -->
+            <div class="nav-links" id="navLinks">
+                <a href="#ODS" class="nav-item">ODS</a>
+                <a href="#problema" class="nav-item">Nuestro problema</a>
+                <a href="#quienesSomos" class="nav-item">¿Quiénes somos?</a>
+                <a href="#miembros" class="nav-item">Nuestro equipo</a>
+                <a href="#proyecto" class="nav-item">Solución</a>
+                <a href="#comoFunciona" class="nav-item">¿Cómo funciona?</a>
+                <a href="#tecnologia" class="nav-item">Tecnologías usadas</a>
+                <a href="#contacto" class="nav-item">Contacto</a>
             </div>
         </nav>
     </header>
 
     <main class="main">
 
+        <!-- Portada / Hero Section -->
         <section class="portada-hero" id="portada">
             <div class="portada-container">
-                <span class="portada-tag">la Iniciativa Sustentable</span>
+                <span class="portada-tag">La Iniciativa Sustentable</span>
                 <h1 class="portada-titulo">EcoloChile</h1>
                 <p class="portada-subtitulo">Proyecto para el medio ambiente</p>
                 <p class="portada-descripcion">
                     Transformando la gestión de residuos y promoviendo el reciclaje comunitario en Chile a través de la
                     innovación social y la tecnología de BarrioLimpio.
                 </p>
-                <a href="#ODS" class="btn-portada">Conoce más</a>
+                <a href="#ODS" class="btn-portada">Conoce más ➔</a>
             </div>
         </section>
 
+        <!-- ODS Section -->
         <section class="problematica" id="ODS">
             <h2>Nuestro punto de investigación</h2>
             <div class="row">
@@ -59,26 +78,23 @@
                         Nosotros como grupo, seleccionamos la ODS número 12:
                         <strong>"Producción y consumo responsables".</strong>
                         El <strong>ODS 12</strong> es el duodécimo objetivo de la Agenda 2030
-                        de la ONU, enfocado en garantizar
-                        modalidades de consumo y producción sostenibles. Sus ejes principales son el uso eficiente de
-                        los recursos naturales, la reducción de la generación de
+                        de la ONU, enfocado en garantizar modalidades de consumo y producción sostenibles. Sus ejes
+                        principales son el uso eficiente de los recursos naturales, la reducción de la generación de
                         desechos y la disminución del desperdicio de alimentos.
                     </p>
                     <p>
-                        Puede que no sepas que significa "ODS", Los ODS
-                        <strong>(Objetivos de Desarrollo Sostenible)</strong>
-                        son un plan mundial de Naciones Unidas con 17 metas para acabar con la pobreza, cuidar el
-                        planeta
-                        y lograr la paz antes de 2030. Los objetivos clave incluyen el fin de la pobreza, hambre cero y
-                        salud y bienestar.
+                        Los ODS <strong>(Objetivos de Desarrollo Sostenible)</strong> son un plan mundial de Naciones
+                        Unidas con 17 metas para acabar con la pobreza, cuidar el planeta y lograr la paz antes de
+                        2030.
                     </p>
                 </div>
                 <div class="cuadro">
-                    <img src="static/images/ODS_12.png" alt="">
+                    <img src="static/images/ODS_12.png" alt="ODS 12 Producción y Consumo Responsables">
                 </div>
             </div>
         </section>
 
+        <!-- Problema Section -->
         <section class="problematica" id="problema">
             <h2>La gestión residual en Chile</h2>
             <div class="row">
@@ -92,18 +108,17 @@
                     <p>
                         En Chile se generan aproximadamente <strong>19,6 millones de toneladas</strong>
                         de residuos sólidos al año (55% industrial y 42% domiciliario). Tan solo en Santiago
-                        existen entre 4.000 y 6.000 contenedores para millones de toneladas de basura, mientras
-                        que comunas como San Ramón cuentan con solo 40 a 60 puntos. Es una problemática crítica que
-                        requiere innovación comunitaria.
+                        existen entre 4.000 y 6.000 contenedores para millones de toneladas de basura. Es una
+                        problemática crítica que requiere innovación comunitaria.
                     </p>
                 </div>
                 <div class="cuadro">
-                    <img src="static/images/fotoResiduos.png"
-                        alt="Problemática de residuos y basura en zonas urbanas de Chile">
+                    <img src="static/images/fotoResiduos.png" alt="Problemática de residuos y basura en zonas urbanas de Chile">
                 </div>
             </div>
         </section>
 
+        <!-- Quiénes Somos Section -->
         <section class="informacion" id="quienesSomos">
             <h2>¿Quiénes somos?</h2>
             <div class="row">
@@ -124,82 +139,182 @@
             </div>
         </section>
 
+        <!-- Sección de Integrantes (5 Compañeros) -->
+        <section class="companeros" id="miembros">
+            <h2>Nuestro equipo</h2>
+            <p class="subtitulo-seccion">Conoce a las mentes jóvenes detrás del desarrollo de EcoloChile y BarrioLimpio.</p>
+            
+            <div class="team-grid">
+                <!-- Integrante 1 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="static/images/XavierOlmos.png" alt="Foto perfil de Xavier Olmos">
+                    </div>
+                    <h3>Xavier Olmos</h3>
+                    <span class="role-badge">Líder del proyecto</span>
+                    <p>Lider, Desarrollador del guión y del logotipo del proyecto.</p>
+                </article>
+
+                <!-- Integrante 2 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="static/images/TomasMariqueo.png" alt="Foto perfil de Tomás Mariqueo">
+                    </div>
+                    <h3>Tomás Mariqueo</h3>
+                    <span class="role-badge">Co-lider y Diseñador Web</span>
+                    <p>Encargado de realizar por completo la página web informativa.</p>
+                </article>
+
+                <!-- Integrante 3 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="static/images/AshleyRamirez.png" alt="Foto perfil de Ashley Ramírez">
+                    </div>
+                    <h3>Ashley Ramírez</h3>
+                    <span class="role-badge">Organizadora</span>
+                    <p>Encargada del la organización y crear el nombre de nuestro stand.</p>
+                </article>
+
+                <!-- Integrante 4 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="static/images/JavierColque.png" alt="Foto perfil de Javier Colque">
+                    </div>
+                    <h3>Javier Colque</h3>
+                    <span class="role-badge">Desarrollador</span>
+                    <p>Encargado de realizar el prototipo de la aplicación web en "Proto.io".</p>
+                </article>
+
+                <!-- Integrante 5 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="static/images/AxelEscobar.png" alt="Foto perfil de Axel Escobar">
+                    </div>
+                    <h3>Axel Escobar</h3>
+                    <span class="role-badge">Presentador</span>
+                    <p>Encargado de realizar la presentación del proyecto por canva.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Solución Section -->
         <section class="solucion" id="proyecto">
             <h2>Proyecto: App "BarrioLimpio"</h2>
             <div class="contenido">
-                <p>
+                <p class="intro-solucion">
                     Nuestro proyecto se basa en la cooperación por cercanía geográfica mediante
                     <strong>geolocalización</strong>. La aplicación conecta a los usuarios bajo dos perfiles simples
                     dentro del mapa de su comuna:
                 </p>
 
-                <article class="perfiles">
-                    <h3>El vecino (Generador)</h3>
-                    <p><strong>Quién es:</strong> La persona que desea reciclar pero no tiene tiempo, cuenta con
-                        movilidad reducida o prefiere no salir de casa.</p>
-                    <p><strong>Su acción:</strong> Reúne sus botellas, plásticos o cartones en una bolsa, abre la app y
-                        presiona el botón: <em>"Bolsa Lista"</em>.</p>
-                    <img src="static/images/vecino.PNG" alt="Perfil del vecino generador en BarrioLimpio"
-                        class="perfil">
-                </article>
+                <div class="perfiles-container">
+                    <article class="perfiles">
+                        <h3>El vecino (Generador)</h3>
+                        <p><strong>Quién es:</strong> La persona que desea reciclar pero no tiene tiempo o prefiere no salir de casa.</p>
+                        <p><strong>Su acción:</strong> Reúne sus materiales, abre la app y presiona: <em>"Bolsa Lista"</em>.</p>
+                        <img src="static/images/vecino.PNG" alt="Perfil del vecino generador en BarrioLimpio" class="perfil">
+                    </article>
 
-                <article class="perfiles">
-                    <h3>El Eco-Voluntario / Reciclador</h3>
-                    <p><strong>Quién es:</strong> Jóvenes scouts, vecinos sustentables o recicladores de base de la
-                        comuna.</p>
-                    <p><strong>Su acción:</strong> Abre la app, revisa el mapa con los "puntos encendidos" y pasa a
-                        retirar los materiales a domicilio.</p>
-                    <img src="static/images/voluntario.PNG" alt="Perfil del eco-voluntario reciclador en BarrioLimpio"
-                        class="perfil">
-                </article>
+                    <article class="perfiles">
+                        <h3>El Eco-Voluntario / Reciclador</h3>
+                        <p><strong>Quién es:</strong> Jóvenes scouts, vecinos sustentables o recicladores de base de la comuna.</p>
+                        <p><strong>Su acción:</strong> Abre la app, revisa el mapa con los "puntos encendidos" y pasa a retirar.</p>
+                        <img src="static/images/voluntario.PNG" alt="Perfil del eco-voluntario reciclador en BarrioLimpio" class="perfil">
+                    </article>
+                </div>
             </div>
         </section>
 
+        <!-- Sección Flujo y Video Incorporado -->
         <section class="explicacion" id="comoFunciona">
             <h2>¿Cómo funciona? Nuestro flujo en 3 pasos</h2>
-            <div class="paneles">
-                <h3>1. El vecino avisa</h3>
-                <p>El generador junta sus residuos y presiona el botón en la app para solicitar la recolección.</p>
-                <img src="static/images/cellphone.png" alt="Icono de notificación en teléfono móvil">
+            
+            <div class="paneles-grid">
+                <div class="paneles">
+                    <div class="step-num">1</div>
+                    <h3>El vecino avisa</h3>
+                    <p>El generador junta sus residuos y presiona el botón en la app para solicitar la recolección.</p>
+                    <img src="static/images/cellphone.png" alt="Icono de notificación en teléfono móvil">
+                </div>
+
+                <div class="paneles">
+                    <div class="step-num">2</div>
+                    <h3>El voluntario acepta</h3>
+                    <p>Un recolector cercano visualiza la alerta en el mapa e inicia la ruta de retiro.</p>
+                    <img src="static/images/truck.png" alt="Icono de transporte o camión de recolección">
+                </div>
+
+                <div class="paneles">
+                    <div class="step-num">3</div>
+                    <h3>Retiro y validación</h3>
+                    <p>Se retira la bolsa en el domicilio y se confirma la entrega ecológica exitosa.</p>
+                    <img src="static/images/check.png" alt="Icono de confirmación y validación">
+                </div>
             </div>
-            <div class="paneles">
-                <h3>2. El voluntario acepta</h3>
-                <p>Un recolector cercano visualiza la alerta en el mapa e inicia la ruta de retiro.</p>
-                <img src="static/images/truck.png" alt="Icono de transporte o camión de recolección">
-            </div>
-            <div class="paneles">
-                <h3>3. Retiro y validación</h3>
-                <p>Se retira la bolsa en el domicilio y se confirma la entrega ecológica exitosa.</p>
-                <img src="static/images/check.png" alt="Icono de confirmación y validación">
+
+            <!-- Reproductor de Video Personalizado debajo de los paneles -->
+            <div class="video-section">
+                <h3>Video explicativo del prototipo</h3>
+                <div class="video-wrapper">
+                    <video id="videoBarrioLimpio" controls preload="metadata">
+                        <source src="static/videos/BarrioLimpio.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video HTML5.
+                    </video>
+                </div>
             </div>
         </section>
 
+        <!-- Tecnologías Usadas -->
+        <section class="desarrollo" id="tecnologia">
+            <h2>Tecnologías utilizadas en el desarrollo</h2>
+            <div class="row">
+                <div class="contenido">
+                    <p>
+                        Para el desarrollo de la página web, utilizamos <strong>Visual Studio Code</strong> 
+                        como entorno de desarrollo. Construimos la estructura mediante <strong>HTML5</strong> 
+                        semántico, la capa estética mediante <strong>CSS3</strong> con diseño responsivo, y la 
+                        interactividad con <strong>JavaScript</strong>.
+                    </p>
+                    <p>
+                        La maquetación del prototipo interactivo de la app fue diseñada mediante la plataforma 
+                        <a href="https://proto.io" target="_blank" rel="noopener">Proto.io</a>, complementada con asesoría
+                        para la formulación de interfaces limpias e intuitivas.
+                    </p>
+                </div>
+                <div class="app imagenes-tech">
+                    <img src="static/images/programas.png" alt="Herramientas de programación">
+                    <img src="static/images/proto.io.png" alt="Prototipado en Proto.io">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
         <section class="contacto" id="contacto">
             <div class="contenido">
-                <h3>Contacto informativo:</h3>
-                <p>tomasmariqueo@liceovvh.cl</p>
+                <h3>¿Tienes dudas o deseas colaborar?</h3>
+                <p>Contacto informativo: <a href="mailto:tomasmariqueo@liceovvh.cl">tomasmariqueo@liceovvh.cl</a></p>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <nav class="navbar" aria-label="Navegación del pie de página">
+        <nav class="navbar-footer" aria-label="Navegación del pie de página">
             <div class="derechos">
                 <p>© Todos los derechos reservados. Proyecto EcoloChile.</p>
             </div>
-            <div class="nav-links">
-                <a href="#ODS">Inicio</a>
-                <a href="#problema">Nuestro problema</a>
-                <a href="#quienesSomos">¿Quiénes somos?</a>
+            <div class="footer-links">
+                <a href="#portada">Inicio</a>
+                <a href="#ODS">ODS</a>
+                <a href="#miembros">Equipo</a>
                 <a href="#proyecto">Solución</a>
-                <a href="#comoFunciona">¿Cómo funciona?</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </nav>
     </footer>
 
+    <!-- Archivo JS separado -->
     <script src="static/js/script.js"></script>
-
 </body>
 
 </html>

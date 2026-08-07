@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="EcoloChile - Proyecto escolar sobre la gestión sustentable de residuos y reciclaje en Chile con la app BarrioLimpio.">
+        content="EcoloChile - School project on sustainable waste management and recycling in Chile using the BarrioLimpio app.">
     <meta name="author" content="EcoloChile">
+    
+    <!-- External Typography Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="../static/css/style.css">
     <title>EcoloChile | BarrioLimpio</title>
 </head>
@@ -14,211 +20,280 @@
 <body>
 
     <header>
-        <nav class="navbar" aria-label="Navegación principal">
+        <nav class="navbar" aria-label="Main Navigation">
             <div class="logo">
                 <i>BarrioLimpio</i>
             </div>
+
             <div class="idiomas">
-                <a href="../index.html" title="Español"><img src="../static/images/spain.png" alt="Idioma Español"
-                        class="spanish"></a>
-                <a href="../pages/english.html" title="English"><img src="../static/images/unitedkingdom.png"
-                        alt="English Language" class="english"></a>
+                <a href="../index.html" title="Español"><img src="../static/images/spain.png" alt="Spanish Language" class="spanish"></a>
+                <a href="pages/english.html" title="English"><img src="../static/images/unitedkingdom.png" alt="English Language" class="english"></a>
             </div>
-            <div class="nav-links">
-                <a href="#portada">Home</a>
-                <a href="#ODS">SDG</a>
-                <a href="#problema">Our problem</a>
-                <a href="#quienesSomos">Who are we?</a>
-                <a href="#proyecto">Solution</a>
-                <a href="#comoFunciona">How it works?</a>
-                <a href="#contacto">Contact</a>
+
+            <a href="#portada" class="nav-inicio-fixed">Home</a>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Dropdown Menu with other options -->
+            <div class="nav-links" id="navLinks">
+                <a href="#ODS" class="nav-item">SDGs</a>
+                <a href="#problema" class="nav-item">Our Problem</a>
+                <a href="#quienesSomos" class="nav-item">About Us</a>
+                <a href="#miembros" class="nav-item">Our Team</a>
+                <a href="#proyecto" class="nav-item">Solution</a>
+                <a href="#comoFunciona" class="nav-item">How It Works</a>
+                <a href="#tecnologia" class="nav-item">Technologies Used</a>
+                <a href="#contacto" class="nav-item">Contact</a>
             </div>
         </nav>
     </header>
 
     <main class="main">
 
+        <!-- Portada / Hero Section -->
         <section class="portada-hero" id="portada">
             <div class="portada-container">
-                <span class="portada-tag">Sustainability Initiative</span>
+                <span class="portada-tag">The Sustainable Initiative</span>
                 <h1 class="portada-titulo">EcoloChile</h1>
-                <p class="portada-subtitulo">Environmental project</p>
+                <p class="portada-subtitulo">Environmental Project</p>
                 <p class="portada-descripcion">
-                    Transforming waste management and promoting community recycling in 
-                    Chile through social innovation and BarrioLimpio technology.
+                    Transforming waste management and promoting community recycling in Chile through social innovation and BarrioLimpio technology.
                 </p>
-                <a href="#ODS" class="btn-portada">Know more...</a>
+                <a href="#ODS" class="btn-portada">Learn more ➔</a>
             </div>
         </section>
 
+        <!-- ODS / SDG Section -->
         <section class="problematica" id="ODS">
-            <h2>Our research focus</h2>
+            <h2>Our Research Focus</h2>
             <div class="row">
                 <div class="contenido">
                     <p>
                         As a group, we selected SDG number 12:
-                        <strong>"Responsible consumption and production".</strong>
-                        The <strong>SDG number 12</strong> It is the twelfth goal of the UN Agenda 2030,
-                        focused on ensuring sustainable consumption and production patterns.
-                        Its main pillars are the efficient use of natural resources,
-                        the reduction of waste generation, and the decrease of food waste.
+                        <strong>"Responsible Consumption and Production".</strong>
+                        <strong>SDG 12</strong> is the twelfth goal of the UN 2030 Agenda, focused on ensuring sustainable consumption and production patterns. Its main pillars are the efficient use of natural resources, reducing waste generation, and decreasing food waste.
                     </p>
                     <p>
-                        You might not know what "SDG" means, The SDG
-                        <strong>(Sustainable Development Goals)</strong>
-                        They are a global United Nations plan with 17 goals to end poverty,
-                        protect the planet, and achieve peace by 2030. Key objectives include
-                        ending poverty, zero hunger, and health and well-being.
+                        The SDGs <strong>(Sustainable Development Goals)</strong> are a global plan by the United Nations featuring 17 goals to end poverty, protect the planet, and achieve peace before 2030.
                     </p>
                 </div>
                 <div class="cuadro">
-                    <img src="../static/images/SDG_12.png" alt="">
+                    <img src="../static/images/ODS_12.png" alt="SDG 12 Responsible Consumption and Production">
                 </div>
             </div>
         </section>
 
+        <!-- Problem Section -->
         <section class="problematica" id="problema">
-            <h2>Residual waste management in Chile</h2>
+            <h2>Waste Management in Chile</h2>
             <div class="row">
                 <div class="contenido">
                     <p>
-                        The lack of infrastructure in Chile primarily affects how Chileans recycle,
-                        as there are typically few recycling zones, bins, or centers available.
-                        This frequently leads to trash piling up in urban areas—such as on sidewalks,
-                        in parks, around trees, and even on beaches or in natural settings.
+                        The lack of infrastructure in Chile directly impacts citizens' recycling capacity, offering very few enabled areas, trash bins, and collection centers. This causes the constant accumulation of waste in urban areas such as streets, parks, and even natural environments.
                     </p>
                     <p>
-                        A 2018 report by the University of Chile revealed a total of <strong>19.6 million tons</strong>
-                        of
-                        annual solid waste—55% industrial and 42% household (or municipal)—a figure
-                        that is unacceptable for a country like Chile. This situation impacts many
-                        Chilean citizens. On average, there are only between 4,000 and 6,000 recycling
-                        points or containers in Santiago—a very low number compared to the 3.6 to 4
-                        million tons of waste generated in the city. Similarly, the 22,000 tons of waste
-                        generated in San Ramón stand in stark contrast to its mere 40 to 60 recycling points.
-                        This is a severe problem in Chile that will be difficult to address.
+                        In Chile, approximately <strong>19.6 million tons</strong> of solid waste are generated per year (55% industrial and 42% household). In Santiago alone, there are between 4,000 and 6,000 containers for millions of tons of waste. It is a critical problem that requires community innovation.
                     </p>
                 </div>
                 <div class="cuadro">
-                    <img src="../static/images/fotoResiduos.png"
-                        alt="Problemática de residuos y basura en zonas urbanas de Chile">
+                    <img src="../static/images/fotoResiduos.png" alt="Waste and garbage problem in urban areas of Chile">
                 </div>
             </div>
         </section>
 
+        <!-- About Us Section -->
         <section class="informacion" id="quienesSomos">
-            <h2>Who are we?</h2>
+            <h2>About Us</h2>
             <div class="row">
                 <div class="contenido">
                     <p>
-                        We are <strong>EcoloChile</strong>, a multidisciplinary team of young people committed
-                        to sustainable transformation and social innovation.
+                        We are <strong>EcoloChile</strong>, a multidisciplinary team of young students committed to sustainable transformation and social innovation.
                     </p>
                     <p>
-                        We emerged from
-                        the urgent need to address one of the most critical and visible issues
-                        in our environment: the infrastructure crisis in waste management
-                        and the recycling deficit in our country's municipalities.
+                        We were born out of the urgency to solve one of the most visible problems in our environment: the infrastructure crisis in waste management and the recycling deficit across our country's municipalities.
                     </p>
                 </div>
                 <div class="logotipo">
-                    <img src="../static/images/image.png" alt="Logotipo oficial de EcoloChile">
+                    <img src="../static/images/image.png" alt="Official EcoloChile Logo">
                 </div>
             </div>
         </section>
 
+        <!-- Team Section (5 Members) -->
+        <section class="companeros" id="miembros">
+            <h2>Our Team</h2>
+            <p class="subtitulo-seccion">Meet the young minds behind the development of EcoloChile and BarrioLimpio.</p>
+            
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="../static/images/XavierOlmos.png" alt="Profile photo of Xavier Olmos">
+                    </div>
+                    <h3>Xavier Olmos</h3>
+                    <span class="role-badge">Project Leader</span>
+                    <p>Leader, scriptwriter, and logo designer for the project.</p>
+                </article>
+
+                <!-- Member 2 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="../static/images/TomasMariqueo.png" alt="Profile photo of Tomás Mariqueo">
+                    </div>
+                    <h3>Tomás Mariqueo</h3>
+                    <span class="role-badge">Co-leader & Web Designer</span>
+                    <p>In charge of completely developing the informative website.</p>
+                </article>
+
+                <!-- Member 3 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="../static/images/AshleyRamirez.png" alt="Profile photo of Ashley Ramírez">
+                    </div>
+                    <h3>Ashley Ramírez</h3>
+                    <span class="role-badge">Organizer</span>
+                    <p>In charge of organization and creating the name for our stand.</p>
+                </article>
+
+                <!-- Member 4 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="../static/images/JavierColque.png" alt="Profile photo of Javier Colque">
+                    </div>
+                    <h3>Javier Colque</h3>
+                    <span class="role-badge">Developer</span>
+                    <p>In charge of creating the web application prototype on "Proto.io".</p>
+                </article>
+
+                <!-- Member 5 -->
+                <article class="team-card">
+                    <div class="avatar-wrapper">
+                        <img src="../static/images/AxelEscobar.png" alt="Profile photo of Axel Escobar">
+                    </div>
+                    <h3>Axel Escobar</h3>
+                    <span class="role-badge">Presenter</span>
+                    <p>In charge of creating the project presentation on Canva.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
         <section class="solucion" id="proyecto">
-            <h2>Project: App "BarrioLimpio"</h2>
+            <h2>Project: "BarrioLimpio" App</h2>
             <div class="contenido">
-                <p>
-                    Our project is based on cooperation driven by geographic proximity <strong>(geolocation)</strong>.
-                    The application divides users into two ultra-simple profiles on the same map of the
-                    municipality:
+                <p class="intro-solucion">
+                    Our project is based on cooperation through geographic proximity via <strong>geolocation</strong>. The application connects users under two simple profiles on the map of their municipality:
                 </p>
 
-                <article class="perfiles">
-                    <h3>The neighbor (Generator)</h3>
-                    <p>
-                        <strong>Who is it:</strong> The person who wants to recycle but lacks the time,
-                        has limited mobility, or simply does not want to leave home.
-                    </p>
-                    <p>
-                        <strong>His action:</strong> He gathers his bottles and/or recyclable materials
-                        and puts them into trash bags to leave at the entrance of the home and
-                        then he press the app button: <em>"Bag ready"</em>.
-                    </p>
-                    <img src="../static/images/vecino.PNG" alt="Perfil del vecino generador en BarrioLimpio"
-                        class="perfil">
-                </article>
+                <div class="perfiles-container">
+                    <article class="perfiles">
+                        <h3>The Neighbor (Generator)</h3>
+                        <p><strong>Who they are:</strong> The person who wants to recycle but doesn't have time or prefers not to leave home.</p>
+                        <p><strong>Their action:</strong> Gathers their materials, opens the app, and taps: <em>"Bag Ready"</em>.</p>
+                        <img src="../static/images/vecino.PNG" alt="Neighbor generator profile in BarrioLimpio" class="perfil">
+                    </article>
 
-                <article class="perfiles">
-                    <h3>The Eco-Volunteer/Recycler</h3>
-                    <p>
-                        <strong>Who is it:</strong> They are volunteers or workers responsible for picking up the
-                        packages.
-                    </p>
-                    <p>
-                        <strong>His action:</strong> He opens the app and checks the map,
-                        looking for the nearest pickup point to collect the bags.
-                    </p>
-                    <img src="../static/images/voluntario.PNG"
-                        alt="Perfil del eco-voluntario reciclador en BarrioLimpio" class="perfil">
-                </article>
+                    <article class="perfiles">
+                        <h3>The Eco-Volunteer / Recycler</h3>
+                        <p><strong>Who they are:</strong> Young scouts, sustainable neighbors, or local base recyclers in the municipality.</p>
+                        <p><strong>Their action:</strong> Opens the app, checks the map for "active spots", and picks up the materials.</p>
+                        <img src="../static/images/voluntario.PNG" alt="Eco-volunteer recycler profile in BarrioLimpio" class="perfil">
+                    </article>
+                </div>
             </div>
         </section>
 
+        <!-- Step-by-Step Flow and Video Section -->
         <section class="explicacion" id="comoFunciona">
-            <h2>How our 3-step workflow works:</h2>
-            <div class="paneles">
-                <h3>1. The neighbor alerts</h3>
-                <p>
-                    The generator gathers their materials and presses the button in the app to request a pickup.
-                </p>
-                <img src="../static/images/cellphone.png" alt="Icono de notificación en teléfono móvil">
+            <h2>How It Works: Our 3-Step Workflow</h2>
+            
+            <div class="paneles-grid">
+                <div class="paneles">
+                    <div class="step-num">1</div>
+                    <h3>The neighbor notifies</h3>
+                    <p>The generator gathers their waste and taps the button in the app to request pickup.</p>
+                    <img src="../static/images/cellphone.png" alt="Notification icon on mobile phone">
+                </div>
+
+                <div class="paneles">
+                    <div class="step-num">2</div>
+                    <h3>The volunteer accepts</h3>
+                    <p>A nearby collector sees the alert on the map and starts the pickup route.</p>
+                    <img src="../static/images/truck.png" alt="Transport or collection truck icon">
+                </div>
+
+                <div class="paneles">
+                    <div class="step-num">3</div>
+                    <h3>Pickup and validation</h3>
+                    <p>The bag is collected from the home and the successful eco-delivery is confirmed.</p>
+                    <img src="../static/images/check.png" alt="Confirmation and validation icon">
+                </div>
             </div>
-            <div class="paneles">
-                <h3>2. The Eco-Volunteer/Recycler accepts</h3>
-                <p>
-                    A nearby collector sees the alert on the map and begins the pickup route.
-                </p>
-                <img src="../static/images/truck.png" alt="Icono de transporte o camión de recolección">
-            </div>
-            <div class="paneles">
-                <h3>3. Pickup and validation</h3>
-                <p>
-                    The bag is collected from the residence, and the successful eco-friendly delivery is confirmed via
-                    the QR code.
-                </p>
-                <img src="../static/images/check.png" alt="Icono de confirmación y validación">
+
+            <!-- Custom Video Player below panels -->
+            <div class="video-section">
+                <h3>Explanatory Video of the Prototype</h3>
+                <div class="video-wrapper">
+                    <video id="videoBarrioLimpio" controls preload="metadata">
+                        <source src="../static/videos/BarrioLimpio.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video playback.
+                    </video>
+                </div>
             </div>
         </section>
 
+        <!-- Technologies Used Section -->
+        <section class="desarrollo" id="tecnologia">
+            <h2>Technologies Used in Development</h2>
+            <div class="row">
+                <div class="contenido">
+                    <p>
+                        For the website development, we used <strong>Visual Studio Code</strong> as our development environment. We built the structure using semantic <strong>HTML5</strong>, the aesthetic layer using <strong>CSS3</strong> with responsive design, and interactivity with <strong>JavaScript</strong>.
+                    </p>
+                    <p>
+                        The layout for the interactive app prototype was designed using the 
+                        <a href="https://proto.io" target="_blank" rel="noopener">Proto.io</a> platform, complemented with guidance for crafting clean and intuitive interfaces.
+                    </p>
+                </div>
+                <div class="app imagenes-tech">
+                    <img src="../static/images/programas.png" alt="Programming tools">
+                    <img src="../static/images/proto.io.png" alt="Prototyping in Proto.io">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section class="contacto" id="contacto">
             <div class="contenido">
-                <h3>Our informative contact:</h3>
-                <p>tomasmariqueo@liceovvh.cl</p>
+                <h3>Have questions or want to collaborate?</h3>
+                <p>Contact information: <a href="mailto:tomasmariqueo@liceovvh.cl">tomasmariqueo@liceovvh.cl</a></p>
             </div>
         </section>
-
     </main>
 
+    <!-- Footer -->
     <footer>
-        <nav class="navbar" aria-label="Navegación del pie de página">
+        <nav class="navbar-footer" aria-label="Footer Navigation">
             <div class="derechos">
-                <p>© All rights reserved. Project EcoloChile.</p>
+                <p>© All rights reserved. EcoloChile Project.</p>
             </div>
-            <div class="nav-links">
-                <a href="#inicio">Home</a>
-                <a href="#quienesSomos">Who are we?</a>
+            <div class="footer-links">
+                <a href="#portada">Home</a>
+                <a href="#ODS">SDGs</a>
+                <a href="#miembros">Team</a>
                 <a href="#proyecto">Solution</a>
-                <a href="#comoFunciona">How it works?</a>
                 <a href="#contacto">Contact</a>
             </div>
         </nav>
     </footer>
 
+    <!-- Separate JS file -->
     <script src="../static/js/script.js"></script>
-
 </body>
 
 </html>
