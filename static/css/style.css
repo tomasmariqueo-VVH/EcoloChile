@@ -348,6 +348,8 @@ p a:hover {
 .row .logotipo {
     flex: 0.8;
     display: flex;
+    gap: 10px;
+    flex-direction: column;
     justify-content: center;
 }
 
